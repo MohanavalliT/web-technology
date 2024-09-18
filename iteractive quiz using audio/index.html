@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz for Friends</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Fun Challenge</h1>
+        
+        <!-- Embedded YouTube video introduction -->
+        <iframe class="intro-video" width="560" height="315" 
+                src="https://www.youtube.com/embed/es4x5R-rV9s?autoplay=1&mute=0" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+        </iframe>
+
+        <!-- Background music -->
+        <audio id="background-music" autoplay loop>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="progress">
+            Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="timer" id="timer">30</div>
+        <div class="question" id="question">What is the capital of Italy?</div>
+        <div class="options" id="options">
+            <button class="option-btn" data-answer="false">Berlin</button>
+            <button class="option-btn" data-answer="true">Rome</button>
+            <button class="option-btn" data-answer="false">Madrid</button>
+            <button class="option-btn" data-answer="false">Paris</button>
+        </div>
+        <div id="score" class="hidden"></div>
+
+        <div class="score hidden" id="score"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

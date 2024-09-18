@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.quiz-container {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f6e58d;
+    letter-spacing: 2px;
+    animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.intro-video {
+    width: 80%;
+    border-radius: 15px;
+    margin: 15px auto;
+    animation: zoomIn 0.8s ease;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.progress, .timer, .question, .options, .score {
+    margin: 25px 0;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress-fill {
+    height: 15px;
+    background-color: #00cec9;
+    width: 10%;
+    transition: width 0.5s;
+}
+
+.options button {
+    background-color: #00b894;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options button:hover {
+    background-color: #00cec9;
+}
+
+.options button:disabled {
+    background-color: #b2bec3;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #e84393;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fd79a8;
+}
+
+button:disabled {
+    background-color: #dfe6e9;
+    cursor: not-allowed;
+}
+
+#background-music {
+    position: absolute;
+    top: -1000px; /* Hide the audio player */
+}
+
+.hidden {
+    display: none;
+}
